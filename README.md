@@ -42,13 +42,13 @@ scp fidle_img.sif groubahiefissa@romeologin1.univ-reims.fr:~/fidle
 salloc --gres=gpu:1 --reservation=your_reservation
 ```
 
-6. Generate a custom Jupyter global config for your remote host (Romeo):
+6. Generate a custom Jupyter global config for your remote host (Romeo), or use the `jupyter_notebook_config.py` in this repo and put it in your /.jupyter directory:
 
 ```
 jupyter notebook --generate-config
 ```
 
-Modify the generated `jupyter_notebook_config.py` file to allow all IP addresses:
+Modify the generated `./jupyter/jupyter_notebook_config.py` file to allow all IP addresses:
 
 ```
 c.NotebookApp.allow_origin = '*' # Allow all origins
